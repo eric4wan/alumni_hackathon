@@ -1,0 +1,82 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#0099cc"
+    tools:context="gatech.hackathon_app.HomeScreen">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView android:id="@+id/fullscreen_content" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:keepScreenOn="true" android:textColor="#33b5e5"
+        android:textStyle="bold" android:textSize="50sp" android:gravity="center"
+        android:text="@string/dummy_content" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:id="@+id/eric">
+
+
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay" android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/map"
+                tools:context="gatech.hackathon_app.MapsActivity"
+                class="com.google.android.gms.maps.SupportMapFragment" />
+
+            <!--<Button android:id="@+id/dummy_button" style="?metaButtonBarButtonStyle"-->
+                <!--android:layout_width="0dp" android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1" android:text="@string/dummy_button"-->
+                <!--android:clickable="true"-->
+                <!--android:onClick="testChange" />-->
+
+            <!--<fragment xmlns:android="http://schemas.android.com/apk/res/android"-->
+                <!--xmlns:tools="http://schemas.android.com/tools"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:id="@+id/map"-->
+                <!--tools:context="gatech.hackathon_app.MapsActivity"-->
+                <!--class="com.google.android.gms.maps.SupportMapFragment" />-->
+            <!--android:name="com.google.android.gms.maps.SupportMapFragment"-->
+
+
+        </LinearLayout>
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+            <!--android:text="wrong"-->
+            <!--android:id="@+id/blah1"-->
+            <!--android:layout_gravity="center" />-->
+    </FrameLayout>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:text="Join Queue"
+        android:id="@+id/joinBtn"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="#ff0014"
+        android:visibility="gone" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:text="Create Queue"
+        android:id="@+id/createBtn"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="#0966ff" />
+
+</FrameLayout>
